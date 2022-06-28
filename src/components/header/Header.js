@@ -69,6 +69,7 @@ const Header = ({ type }) => {
     {
       startDate: new Date(),
       endDate: new Date(Date.now() + 3600 * 1000 * 24),
+      // endDate: new Date().setDate(this.startDate.getDate() + 1),
 
       key: "selection",
     },
