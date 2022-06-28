@@ -25,22 +25,23 @@
 
   @media only screen and (max-width: 600px) {
     .footer{
-      /* width: 100%; */
+      width: 80%;
       width: fit-content;
       font-size: 12px;
     }
     
     .fLists{
-      width: 100%;
+      width: 80%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       margin-bottom: 50px;
+      margin: 0px;
     }
     
     .fList{
       list-style: none;
-      padding: 0;
+      padding: 0px;
     }
     
     .fListItem{

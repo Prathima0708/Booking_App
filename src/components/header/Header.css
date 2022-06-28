@@ -188,26 +188,27 @@
       border: none;
       padding: 5px;
       cursor: pointer;
-      margin-left: -320px;
-      margin-top: 80px;
+      margin-left: -320px; 
+       margin-top: 80px;
      
     }
     
     .headerSearch {
      
-     
-        height: 45px;
+   
+        height: 55px;
         margin-top: 20px;
         background-color: white;
         border: 3px solid #febb02;
-       
+      
         align-items: center;
         justify-content: space-around;
-        padding: 40px 0px;
+        padding: 30px 0px;
         border-radius: 5px;
         position: absolute;
         bottom: -25px;
-        width: 100%;
+        /* width: 88%; */
+        width: fit-content;
      
     }
     
@@ -225,6 +226,7 @@
       border: none;
       outline: none;
       margin:0px;
+      font-size: x-small;
      
     }
     
