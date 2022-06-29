@@ -7,12 +7,14 @@ import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import SearchItem from "../../components/searchItem/SearchItem";
 import Footer from "../../components/footer/Footer";
+import DatePicker from "react-datepicker";
 import MailList from "../../components/mailList/MailList";
 
 const List = () => {
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);
-  const [date, setDate] = useState(location.state.date);
+  // const [date, setDate] = useState(location.state.date);
+  const [startDate, setStartDate] = useState(location.state.startDate);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state.options);
 
@@ -30,15 +32,23 @@ const List = () => {
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
+
               <span onClick={() => setOpenDate(!openDate)}>{`${format(
-                date[0].startDate,
+                startDate,
                 "MM/dd/yyyy"
-              )} to ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+              )} to ${format(
+                startDate.getTime() + 86400000,
+                "MM/dd/yyyy"
+              )}`}</span>
               {openDate && (
-                <DateRange
-                  onChange={(item) => setDate([item.selection])}
-                  minDate={new Date()}
-                  ranges={date}
+                // <DateRange
+                //   onChange={(item) => setDate([item.selection])}
+                //   minDate={new Date()}
+                //   ranges={date}
+                // />
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
                 />
               )}
             </div>

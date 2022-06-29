@@ -6,6 +6,8 @@ import {
   faPlane,
   faTaxi,
 } from "@fortawesome/free-solid-svg-icons";
+
+import "react-datepicker/dist/react-datepicker.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 import { DateRange } from "react-date-range";
@@ -20,15 +22,18 @@ import { useNavigate } from "react-router-dom";
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
-  const [date, setDate] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(Date.now() + 3600 * 1000 * 24),
-      // endDate: new Date().setDate(this.startDate.getDate() + 1),
+  // const [date, setDate] = useState([
+  //   {
+  //     startDate: new Date(),
+  //     endDate: new Date(Date.now() + 3600 * 1000 * 24),
 
-      key: "selection",
-    },
-  ]);
+  //     // endDate: date[0].startDate.setDate(date[0].startDate.getDate() + 1),
+
+  //     key: "selection",
+  //   },
+  // ]);
+
+  const [startDate, setStartDate] = useState(new Date());
 
   // const [date, setDate] = useState();
   // const [checkedoutDate, setCheckedOutDate] = useState();
@@ -52,7 +57,7 @@ const Header = ({ type }) => {
   };
 
   const handleSearch = () => {
-    navigate("/hotels", { state: { destination, date, options } });
+    navigate("/hotels", { state: { destination, startDate, options } });
   };
   // function addDayToCurrentDate(days) {
   //   let currentDate = new Date();
@@ -70,9 +75,7 @@ const Header = ({ type }) => {
   //   var date = new Date();
   //   date.setDate(date.getDate() + 1);
   // };
-  const setEndDate = () => {
-    return new Date(date[0].startDate.setDate(date[0].startDate.getDate() + 1));
-  };
+
   return (
     <div className="header">
       <div
@@ -118,7 +121,7 @@ const Header = ({ type }) => {
                 />
               </div>
               <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
+                {/* <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                 <span
                   onClick={() => setOpenDate(!openDate)}
                   className="headerSearchText"
@@ -136,7 +139,18 @@ const Header = ({ type }) => {
                     className="date"
                     minDate={new Date()}
                   />
-                )}
+                )} */}
+
+                <DatePicker
+                  className="startDate"
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                />
+
+                <DatePicker
+                  className="startDate"
+                  selected={new Date(startDate.getTime() + 86400000)}
+                />
               </div>
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faPerson} className="headerIcon" />

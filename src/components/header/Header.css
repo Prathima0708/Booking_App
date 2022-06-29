@@ -192,7 +192,9 @@
        margin-top: 80px;
      
     }
-    
+    /* .startDate{
+      width: 35px;
+    } */
     .headerSearch {
      
    
@@ -207,9 +209,12 @@
         border-radius: 5px;
         position: absolute;
         bottom: -25px;
-        /* width: 88%; */
-        width: fit-content;
+        /* width: 98%; */
+        /* width: fit-content; */
      
+    }
+    .startDate{
+      width: 50px;
     }
     
     .headerIcon {
@@ -234,6 +239,9 @@
       color: lightgray;
       cursor: pointer;
       padding: 0px;
+    
+      /* margin-left: -195px; */
+     
     }
     
     .date {
