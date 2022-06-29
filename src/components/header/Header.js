@@ -145,10 +145,12 @@ const Header = ({ type }) => {
                   className="startDate"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
+                  minDate={new Date()}
                 />
 
                 <DatePicker
                   className="startDate"
+                  minDate={new Date()}
                   selected={new Date(startDate.getTime() + 86400000)}
                 />
               </div>
