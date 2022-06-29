@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.5a16f5d7.css",
-    "main.js": "/static/js/main.196e92bf.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/index.html",
-    "main.5a16f5d7.css.map": "/static/css/main.5a16f5d7.css.map",
-    "main.196e92bf.js.map": "/static/js/main.196e92bf.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/Booking_App/build/static/css/main.5a16f5d7.css",
+    "main.js": "/Booking_App/build/static/js/main.f4be7e1f.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Booking_App/build/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/Booking_App/build/index.html",
+    "main.5a16f5d7.css.map": "/Booking_App/build/static/css/main.5a16f5d7.css.map",
+    "main.f4be7e1f.js.map": "/Booking_App/build/static/js/main.f4be7e1f.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Booking_App/build/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a16f5d7.css",
-    "static/js/main.196e92bf.js"
+    "static/js/main.f4be7e1f.js"
   ]
 }
