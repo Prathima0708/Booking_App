@@ -105,7 +105,7 @@
       background-color: #febb02;
       padding: 10px;
       border-radius: 10px;
-      /* position: sticky; */
+      position: sticky;
       /* width: 100% !important; */
       top: 10px;
       height: max-content;

@@ -54,6 +54,9 @@ const Header = ({ type }) => {
         [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
       };
     });
+    // if (options[name] === 15) {
+    //   alert("exceeded max value");
+    // }
   };
 
   const handleSearch = () => {
@@ -143,6 +146,7 @@ const Header = ({ type }) => {
 
                 <DatePicker
                   className="startDate"
+                  closeOnScroll="true"
                   selected={startDate}
                   onChange={(date) => setStartDate(date)}
                   minDate={new Date()}
@@ -176,6 +180,7 @@ const Header = ({ type }) => {
                           {options.adult}
                         </span>
                         <button
+                          disabled={options.adult === 15}
                           className="optionCounterButton"
                           onClick={() => handleOption("adult", "i")}
                         >
@@ -197,6 +202,7 @@ const Header = ({ type }) => {
                           {options.children}
                         </span>
                         <button
+                          disabled={options.children === 15}
                           className="optionCounterButton"
                           onClick={() => handleOption("children", "i")}
                         >
