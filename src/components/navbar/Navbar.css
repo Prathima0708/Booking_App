@@ -38,7 +38,8 @@
     }
     
     .navContainer{
-      width: fit-content;
+      width: 80%;
+      /* width: fit-content; */
      /* width: max-content; */
       /* max-width: 1024px; */
       color: white;

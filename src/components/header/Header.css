@@ -147,7 +147,7 @@
     }
     
     .headerContainer {
-      width: 100%;
+      width: 95%;
       margin: 0px 0px 20px 0px;
      
     }
@@ -201,7 +201,8 @@
         height: 55px;
         margin-top: 20px;
         background-color: white;
-        border: 3px solid #febb02;
+       
+        border: 5px solid #febb02;
       
         align-items: center;
         justify-content: space-around;
@@ -209,7 +210,10 @@
         border-radius: 5px;
         position: absolute;
         bottom: -25px;
-        /* width: 98%; */
+        width: 96%;
+        margin-right: 90px;
+        width: 98%;
+        margin-left: -10px;
         /* width: fit-content; */
      
     }
@@ -230,7 +234,7 @@
     .headerSearchInput {
       border: none;
       outline: none;
-      margin:0px;
+     
       font-size: x-small;
      
     }
@@ -253,7 +257,8 @@
     .options {
       z-index: 2;
       position: absolute;
-      top: 50px;
+      top: 20px;
+      left:90px;
       background-color: white;
       color: gray;
       border-radius: 5px;

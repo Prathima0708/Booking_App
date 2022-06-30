@@ -45,9 +45,11 @@
       margin-top: 20px;
       overflow: hidden;
       cursor: pointer;
+      margin-left: 20px;
     }
     
     .pListImg{
+      width: 95%;
       /* width: 80%; */
       
       

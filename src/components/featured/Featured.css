@@ -48,13 +48,14 @@
       overflow: hidden;
       height: 250px;
       flex:1;
+      margin-left: 20px;
       
       
     }
     
     .featuredImg{
       /* width: fit-content; */
-      /* width: 80%; */
+      width: 95%;
      margin-top: 20px;
      border-radius: 10px;
       /* height: auto; */
